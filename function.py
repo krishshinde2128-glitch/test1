@@ -1,3 +1,5 @@
+import math 
+
 x = 10
 
 def sum_with_void(x):
