@@ -5,4 +5,3 @@ while True:
         break
     elif reminder_status == 'no':
         print("please complete your task soon!")
-
