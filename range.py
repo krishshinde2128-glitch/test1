@@ -15,3 +15,6 @@ for i in reversed(num):
 str="krish"
 for i in reversed(str):
     print(i)
+    [print(i in str)]
+    print(len(str))
+    print(str.index(i))
