@@ -25,4 +25,11 @@ while x < len(my_tuples):
 
 con_tuples = list(my_tuples)
 con_tuples[0] = 34
-print (con_tuples)
+print (con_tuples) # 34,2,3
+con_tuples.pop(1) # only can use when tuple is converted to list
+print (con_tuples) # 34,3
+
+# tuples in built functions
+# count(2) -> counts no of times 2 occurs in tuple
+# index(3) -> returns index of first occurrence of 3
+
