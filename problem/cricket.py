@@ -42,8 +42,14 @@ if choice == toss_result:
 
 else:
     print("\n💻 Computer won the toss!")
-    user_bats = random.choice(["bat", "bowl"])
-    print("Computer chooses to", user_bats)
+    comp_choice = random.choice(["bat", "bowl"])
+    print("Computer chooses to", comp_choice)
+
+    # User's role is opposite
+    if comp_choice == "bat":
+        user_bats = "bowl"
+    else:
+        user_bats = "bat"
 
 # ================================
 #           FIRST INNINGS
@@ -121,7 +127,7 @@ if user_bats == "bowl":   # Now user bowls
                 print("\n🎉 YOU CHASED THE TARGET!")
                 break
 else:                    # Computer bats second
-    print("\nComputer is BATTING now!")
+    print("\nComputer is BATTINGe now!")
     while True:
         user_play = get_number("Enter your bowl (1–6): ")
         comp_play = random.randint(1, 6)
