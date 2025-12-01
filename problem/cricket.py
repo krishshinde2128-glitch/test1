@@ -1,8 +1,8 @@
 import random
 
-print("🏏 Welcome to FULL Odd–Even Cricket Game!")
+print("Welcome to FULL Odd–Even Cricket Game!")
 
-# --- TOSS ---
+#TOSS 
 
 print("\n--- TOSS TIME ---")
 
@@ -30,7 +30,7 @@ toss_result = "even" if total % 2 == 0 else "odd"
 
 # Decide toss winner
 if choice == toss_result:
-    print("\n🎉 You won the toss!")
+    print("\n You won the toss!")
 
     # VALIDATE bat/bowl input
     while True:
@@ -41,7 +41,7 @@ if choice == toss_result:
             print("Invalid input! Type only 'bat' or 'bowl'. Try again.\n")
 
 else:
-    print("\n💻 Computer won the toss!")
+    print("\n Computer won the toss!")
     comp_choice = random.choice(["bat", "bowl"])
     print("Computer chooses to", comp_choice)
 
@@ -51,9 +51,6 @@ else:
     else:
         user_bats = "bat"
 
-# ================================
-#           FIRST INNINGS
-# ================================
 def get_number(prompt):
     while True:
         try:
@@ -64,7 +61,6 @@ def get_number(prompt):
                 print("Invalid input! Enter a number between 1 and 6.\n")
         except ValueError:
             print("Invalid input! Enter digits only (1–6).\n")
-
 
 print("\n--- FIRST INNINGS START ---")
 score1 = 0
@@ -77,7 +73,7 @@ if user_bats == "bat":     # User bats first
         print("Computer bowled:", comp_play)
 
         if user_play == comp_play:
-            print("\n❌ OUT!")
+            print("\n OUT!")
             print("Your 1st innings score:", score1)
             break
         else:
@@ -92,16 +88,12 @@ else:                       # Computer bats first
         print("Computer played:", comp_play)
 
         if user_play == comp_play:
-            print("\n🎯 You GOT the computer OUT!")
+            print("\n You GOT the computer OUT!")
             print("Computer's 1st innings score:", score1)
             break
         else:
             score1 += comp_play
             print("Computer score:", score1)
-
-# ================================
-#           SECOND INNINGS
-# ================================
 
 
 print("\n--- SECOND INNINGS START ---")
@@ -116,7 +108,7 @@ if user_bats == "bowl":   # Now user bowls
         print("Computer bowled:", comp_play)
 
         if user_play == comp_play:
-            print("\n❌ OUT!")
+            print("\n OUT!")
             print("Your final score:", score2)
             break
         else:
@@ -124,7 +116,7 @@ if user_bats == "bowl":   # Now user bowls
             print("Runs:", score2)
 
             if score2 > score1:
-                print("\n🎉 YOU CHASED THE TARGET!")
+                print("\n YOU CHASED THE TARGET!")
                 break
 else:                    # Computer bats second
     print("\nComputer is BATTINGe now!")
@@ -134,7 +126,7 @@ else:                    # Computer bats second
         print("Computer played:", comp_play)
 
         if user_play == comp_play:
-            print("\n🎯 You got the computer OUT!")
+            print("\n You got the computer OUT!")
             print("Computer's final score:", score2)
             break
         else:
@@ -142,26 +134,22 @@ else:                    # Computer bats second
             print("Computer score:", score2)
 
             if score2 > score1:
-                print("\n💻 COMPUTER CHASED THE TARGET!")
+                print("\n COMPUTER CHASED THE TARGET!")
                 break
-
-# ================================
-#             RESULT
-# ================================
 
 print("\n--- MATCH RESULT ---")
 
 if score2 > score1:
     if user_bats == "bat":
-        print("💻 Computer wins!")
+        print(" Computer wins!")
     else:
         print("🎉 You win!")
 
 elif score1 > score2:
     if user_bats == "bat":
-        print("🎉 You win!")
+        print(" You win!")
     else:
-        print("💻 Computer wins!")
+        print(" Computer wins!")
 
 else:
-    print("🤝 Match TIED!")
+    print(" Match TIED!")
